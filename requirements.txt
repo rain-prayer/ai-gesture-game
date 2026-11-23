@@ -1,0 +1,5 @@
+# Python 3.12（重要：3.14 目前没有 mediapipe 的预编译 wheel）
+pygame==2.6.1
+opencv-python>=4.8,<6
+mediapipe>=0.10.14,<2
+numpy>=1.26

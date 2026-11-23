@@ -55,7 +55,7 @@ def main():
         avg, mx = r
         print(
             f"res={res}  avg_detect={avg:.1f} ms  max={mx:.1f} ms  "
-            f"({1000 / avg:.1f} fps 推理能力)  30fps 帧预算=33ms"
+            f"({1000 / avg:.1f} fps 推理能力)  60fps 帧预算=16.7ms"
         )
 
 

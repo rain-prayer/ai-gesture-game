@@ -1,4 +1,4 @@
-<#
+﻿<#
 .SYNOPSIS
     将 ai-gesture-game 推送到 Gitee / GitHub。
 
@@ -25,7 +25,7 @@ param(
     [switch]$SkipCommit
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"
 
 function Fail([string]$msg) {
     Write-Host ""
@@ -112,7 +112,7 @@ foreach ($t in $targets) {
     }
 
     # 先探测远端是否存在（空仓库也会返回成功；不存在会报错）
-    git ls-remote --heads $t.Name 1>$null 2>$null
+    $probe = git ls-remote --heads $t.Name 2>&1
     if ($LASTEXITCODE -ne 0) {
         Write-Host "[WARN] 无法访问远端仓库 $($t.Url)" -ForegroundColor Yellow
         Write-Host "       请确认：① 仓库已在网页上创建为【空仓库】；② 账号/私人令牌正确；③ 网络可达。" -ForegroundColor Yellow
@@ -120,7 +120,7 @@ foreach ($t in $targets) {
         continue
     }
 
-    git push -u $t.Name $Branch
+    git push -u $t.Name $Branch 2>&1 | Out-Host
     if ($LASTEXITCODE -ne 0) {
         Write-Host "[WARN] push 失败：$($t.Name)" -ForegroundColor Yellow
         $failed += $t.Name

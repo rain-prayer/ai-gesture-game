@@ -5,6 +5,7 @@
 **技术栈**：Python 3.12 · MediaPipe Hand Landmarker（21 关键点 / 免训练）· OpenCV · Pygame 2.6 · NumPy
 **代码规模**：约 1,450 行 Python（游戏主体 + 识别封装）+ 8 个程序化音效 / 1 段 BGM
 **运行方式**：单机桌面程序，逻辑分辨率 640×480，全屏自适应放大，60 FPS 主循环
+**仓库**：[Gitee 主仓](https://gitee.com/rainprayer/ai-gesture-game) ｜ [GitHub 镜像](https://github.com/rain-prayer/ai-gesture-game)
 
 | 主菜单 | 对局 |
 |:--:|:--:|

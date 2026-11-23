@@ -11,7 +11,7 @@
     powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote gitee
 
 .EXAMPLE
-    powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote all -GitHubUser yourname
+    powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote all -GitHubUser rain-prayer
 #>
 param(
     [ValidateSet("gitee", "github", "all")]
@@ -19,7 +19,7 @@ param(
 
     [string]$RepoName = "ai-gesture-game",
     [string]$GiteeUser = "rainprayer",
-    [string]$GitHubUser = "",
+    [string]$GitHubUser = "rain-prayer",
     [string]$Branch = "main",
     [string]$Message = "chore: first public release",
     [switch]$SkipCommit

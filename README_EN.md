@@ -4,6 +4,8 @@
 
 Built with **Python 3.12 · MediaPipe Hand Landmarker (21 landmarks, no training) · OpenCV · Pygame 2.6**.
 
+Repos: [Gitee (primary)](https://gitee.com/rainprayer/ai-gesture-game) | [GitHub (mirror)](https://github.com/rain-prayer/ai-gesture-game)
+
 | Main menu | In-game |
 |:--:|:--:|
 | ![menu](docs/images/menu.png) | ![gameplay](docs/images/gameplay.png) |

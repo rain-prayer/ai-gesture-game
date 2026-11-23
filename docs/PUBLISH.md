@@ -6,7 +6,7 @@
 |----|----|
 | 仓库名 | `ai-gesture-game` |
 | Gitee | https://gitee.com/rainprayer/ai-gesture-game |
-| GitHub | https://github.com/rainprayer/ai-gesture-game（镜像） |
+| GitHub | https://github.com/rain-prayer/ai-gesture-game（镜像） |
 | 默认分支 | `main` |
 | 协议 | MIT |
 
@@ -41,10 +41,10 @@ git config user.email "rainprayer@users.noreply.gitee.com"
 powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote gitee
 
 # 只推 GitHub
-powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote github -GitHubUser <你的GitHub用户名>
+powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote github -GitHubUser rain-prayer
 
 # 双仓都推
-powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote all -GitHubUser <你的GitHub用户名>
+powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote all -GitHubUser rain-prayer
 ```
 
 脚本会做这些事：检查工作区 → 提交未提交改动 → 配置远端 → `git push -u` → 用 `git ls-remote` 核验远端分支是否真的存在。
@@ -55,13 +55,15 @@ powershell -ExecutionPolicy Bypass -File scripts/publish.ps1 -Remote all -GitHub
 git remote add gitee https://gitee.com/rainprayer/ai-gesture-game.git
 git push -u gitee main
 
-git remote add github https://github.com/<user>/ai-gesture-game.git
+git remote add github https://github.com/rain-prayer/ai-gesture-game.git
 git push -u github main
 ```
 
 首次推送时 Git 凭证管理器会弹窗要求账号 + **私人令牌**（不是登录密码），输入一次后会记住。
 
 ## 4. 关于 GitHub 镜像
+
+当前两台机器（Gitee / GitHub）都已推送成功，GitHub 侧已设置仓库描述、主页（指向 Gitee）和 Topics。
 
 GitHub 在国内可能无法直连。可选的传输方式：
 
